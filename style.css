@@ -1,7 +1,129 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root{
+--orrange: hsl(24, 100%, 57%);
+--light-orrange: hsl(25, 74%, 95%);
+--gray: hsl(0, 0%, 27%);
+--black: hsl(0, 0%, 5%);
+}
+
+* {
+  font-family: "Work Sans", serif;
+    list-style: none;
+    box-sizing: border-box;
+
+}
 
 h1 {
   font-family: "Work Sans", serif;
-  font-weight: 400;
+}
+
+/* share style */
+.display-flex {
+  display: flex;
+}
+
+main > section {
+  margin-top: 100px;
+}
+
+/* header area */
+
+header{
+  background-color: var(--light-orrange);
+}
+.nav {
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.nav-items li {
+  margin-right: 40px;
+  font-size: 1.3rem;
+}
+
+.nav h1 {
+  font-size: 2rem;
+}
+
+.nav-items li a {
+  text-decoration: none;
+  color: var(--gray);
+}
+.nav, .banner {
+  max-width: 1380px;
+  margin: 0px auto;
+}
+
+.banner-content {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.header-title {
+  font-size: 3rem;
+}
+.banner-content p {
+  font-size: 1.2rem;
+}
+.btn-primary {
+  background: var(--orrange);
+  color: white;
+  padding: 20px 25px;
+  font-size: 1.2rem;
+  border: 0;
+  border-radius: 5px;
+}
+.banner-image{
+ width: 100%;
+
+}
+
+/* features section style */
+
+.teams {
+  max-width: 1380px ;
+  margin: 100px auto;
+  align-items: center;
+  
+  
+}
+.team-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.features {
+  margin-left: 60px ;
+  max-width: 500px;
+}
+.features h1 {
+  font-size: 3rem;
+}
+
+/* respnsive style */
+@media screen and (max-width: 576px) {
+   .nav,.teams {
+    margin: 0px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.nav-items li {
+  margin-right: 20px;
+}
+.team-images{
+  grid-template-columns: repeat(1, 1fr);
+  margin-top: 100px;
+}
+.features {
+  margin-left: 20px ;
+  max-width: 500px;
+}
+}
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .teams{flex-direction: column;}
 }
